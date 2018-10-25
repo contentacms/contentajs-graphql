@@ -1,0 +1,83 @@
+{
+  "name": "@contentacms/contentajs-graphql",
+  "version": "1.0.0",
+  "description": "GraphQL helpers for Contenta JS",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest --coverage --detectOpenHandles --forceExit",
+    "test-ci": "NODE_ENV=test yarn jest --coverage --ci --runInBand --detectOpenHandles --forceExit",
+    "lint": "eslint --ignore-path .gitignore .",
+    "prepare": "npm run build",
+    "semantic-release": "semantic-release",
+    "build": "babel src -d lib --delete-dir-on-start --copy-files && flow-copy-source src lib",
+    "emdaer": "emdaer && git add *.md",
+    "prettier": "prettier --write 'src/**/*.js' && eslint 'src/**/*.js' --fix",
+    "flow": "flow status --strip-root src",
+    "installPeers": "yarn add --peer --no-lockfile `node ./scripts/printPeers.js`"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contentacms/graphqljs.git"
+  },
+  "keywords": [
+    "graphql",
+    "contentacms",
+    "api",
+    "drupal",
+    "decoupled"
+  ],
+  "author": "Mateu Aguiló Bosch <mateu.aguilo.bosch@gmail.com> (e0ipso)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/contentacms/graphqljs/issues"
+  },
+  "homepage": "https://github.com/contentacms/graphqljs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@commitlint/config-angular": "^7.1.2",
+    "@emdaer/cli": "^3.2.3",
+    "@emdaer/plugin-contributors-details-github": "^3.2.3",
+    "@emdaer/plugin-documentation": "^3.2.3",
+    "@emdaer/plugin-image": "^3.2.3",
+    "@emdaer/plugin-import": "^3.2.3",
+    "@emdaer/plugin-license-reference": "^3.2.3",
+    "@emdaer/plugin-shields": "^3.2.3",
+    "@emdaer/plugin-value-from-package": "^3.2.3",
+    "@emdaer/transform-prettier": "^3.2.3",
+    "@emdaer/transform-table-of-contents": "^3.2.3",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "commitlint": "^7.2.1",
+    "eslint": "^5.7.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-problems": "^1.1.0",
+    "eslint-plugin-babel": "^5.2.1",
+    "eslint-plugin-better": "^0.1.5",
+    "eslint-plugin-flowtype": "^3.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "flow-bin": "^0.84.0",
+    "flow-copy-source": "^2.0.2",
+    "flow-typed": "^2.5.1",
+    "husky": "^1.1.2",
+    "jest": "^23.6.0",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "semantic-release": "^15.10.5",
+    "semantic-release-conventional-commits": "^2.0.1",
+    "sinon": "^7.1.0",
+    "travis-deploy-once": "^5.0.9"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.1.0",
+    "fs-extra": "^7.0.0",
+    "got": "^9.2.2",
+    "graphql": "^14.0.2"
+  }
+}

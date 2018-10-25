@@ -1,0 +1,35 @@
+language: node_js
+node_js: lts/carbon
+cache:
+  directories:
+    - node_modules
+    - .tmp
+    - ~/.npm
+notifications:
+  email: false
+before_install:
+  - git fetch origin --tags
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
+install:
+  - yarn --pure-lockfile
+
+stages:
+  - name: test
+    # require the event type to not be a semantic release tag.
+    if: NOT tag =~ ^v\d+\.\d+\.\d+$
+  - name: release
+    if: branch = master AND fork = false AND type IN (push, api)
+
+jobs:
+  include:
+    -
+      stage: test
+      script:
+        - yarn lint
+        - yarn flow
+        - yarn test-ci
+
+    -
+      stage: release
+      script:
+        - yarn semantic-release

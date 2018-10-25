@@ -1,0 +1,15 @@
+[ignore]
+.*/node_modules/config-chain/test/broken.json
+
+[include]
+
+[libs]
+./flow-typed
+./flow-typed/custom
+
+[lints]
+
+[options]
+emoji=true
+
+[strict]

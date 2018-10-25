@@ -1,0 +1,5 @@
+__coverage__
+lib
+!src/**/lib
+node_modules
+/scratch

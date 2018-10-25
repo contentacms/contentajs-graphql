@@ -1,4 +1,5 @@
-ContentaJS GraphQL is an example repository
+ContentaJS GraphQL is a repository that contains a set of helpers to build your
+GraphQL project on top of Contenta.js
 
 <!--emdaer-p
   - '@emdaer/plugin-image'
@@ -7,6 +8,4 @@ ContentaJS GraphQL is an example repository
     align: center
 -->
 
-**IMPORTANT:** this project is meant to be a starting kit for the node
-integration of your application based on Contenta CMS. We **do not** provide
-upgrade paths or backwards compatibility. The model for this is _Fork & Go_. 
+**IMPORTANT:** I need to finish this…

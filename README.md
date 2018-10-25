@@ -5,18 +5,15 @@
 -->
 
 <!--
-  emdaerHash:c1e8c82ae08510cb3c067075c8c79c8e
+  emdaerHash:20e833ffdb0f9cef996102cac0420315
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
-<p>ContentaJS is a project that integrates with Contenta CMS to provide
-an ultra high performing headless CMS. It also provides a nodejs application
-where to host your Server Side Rendering and custom code integrations.</p>
+<p>ContentaJS GraphQL is a repository that contains a set of helpers to build your
+GraphQL project on top of Contenta.js</p>
 <p align="center"><img src="./.emdaer/docs/assets/graphql.png" alt="GraphQL"></p>
 
-<p><strong>IMPORTANT:</strong> this project is meant to be a starting kit for the node
-integration of your application based on Contenta CMS. We <strong>do not</strong> provide
-upgrade paths or backwards compatibility. The model for this is <em>Fork &amp; Go</em>.</p>
+<p><strong>IMPORTANT:</strong> I need to finish this…</p>
 <!-- toc -->
 <ul>
 <li><a href="#installation">Installation</a></li>

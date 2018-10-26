@@ -18,8 +18,8 @@ module.exports = async (
   },
   additionalTypeDefs: TypeDefinitions = [],
   additionalResolvers: ResolverMap = {}
-) => {
-  return new ApolloServer({
+) =>
+  new ApolloServer({
     typeDefs: await Promise.all(directives.concat(additionalTypeDefs)),
     resolvers: Object.assign({}, resolvers, additionalResolvers),
     resolverValidationOptions: {
@@ -28,4 +28,3 @@ module.exports = async (
     schemaDirectives,
     context,
   });
-};

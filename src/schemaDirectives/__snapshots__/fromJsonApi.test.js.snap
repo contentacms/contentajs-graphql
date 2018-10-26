@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FromJsonApi visitInputFieldDefinition can get the data from the JSON API and process single cardinality 1`] = `
+Object {
+  "id": "1",
+  "one": "uno",
+  "rel1": Object {
+    "id": "2",
+    "rel7": null,
+    "rel8": Object {
+      "id": "1",
+      "one": "two",
+      "three": "four",
+      "type": "lorem",
+    },
+    "rel9": Object {
+      "id": "1",
+      "one": "two",
+      "three": "four",
+      "type": "lorem",
+    },
+    "type": "lorem",
+  },
+  "three": "dos",
+  "type": "foo",
+}
+`;

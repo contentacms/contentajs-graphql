@@ -12,7 +12,7 @@ describe('apolloServerWithContext', () => {
     expect.assertions(5);
     const apolloServer = await apolloServerWithContext(
       { foo: 'bar' },
-      ['{}', 'Pi'],
+      [Promise.resolve('{}'), Promise.resolve('Pi')],
       { the: () => 'resolver' }
     );
     const apolloArgs = ase.ApolloServer.mock.calls[0][0];

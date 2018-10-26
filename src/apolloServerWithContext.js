@@ -16,7 +16,7 @@ module.exports = async (
     cmsHost: string,
     jsonApiPrefix: string,
   },
-  additionalTypeDefs: TypeDefinitions = [],
+  additionalTypeDefs: Array<Promise<TypeDefinitions>> = [],
   additionalResolvers: ResolverMap = {}
 ) =>
   new ApolloServer({

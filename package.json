@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage --detectOpenHandles --forceExit",
     "test-ci": "NODE_ENV=test yarn jest --coverage --ci --runInBand --detectOpenHandles --forceExit",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint .",
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
     "build": "babel src -d lib --delete-dir-on-start --copy-files && flow-copy-source src lib",

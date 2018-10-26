@@ -1,8 +1,8 @@
 // @flow
 
-import type { ObjectLiteral } from '@contentacms/contenta-graphql/types/common';
-
 declare module '@contentacms/contenta-graphql/types/jsonapi' {
+  import type { ObjectLiteral } from '@contentacms/contenta-graphql/types/common';
+
   declare type JsonApiBase = {
     meta: ObjectLiteral,
     links: { [string]: string },

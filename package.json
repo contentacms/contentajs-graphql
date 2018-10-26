@@ -14,7 +14,7 @@
     "prettier": "prettier --write 'src/**/*.js' && eslint 'src/**/*.js' --fix",
     "flow": "flow status --strip-root src",
     "installPeers": "npm install --no-save `node ./scripts/printPeers.js`",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once --pro"
   },
   "repository": {
     "type": "git",

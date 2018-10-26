@@ -10,8 +10,6 @@ notifications:
 before_install:
   - git fetch origin --tags
   - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
-install:
-  - yarn --pure-lockfile
 
 stages:
   - name: test

@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest --coverage --detectOpenHandles --forceExit",
-    "test-ci": "NODE_ENV=test yarn jest --coverage --ci --runInBand --detectOpenHandles --forceExit",
+    "test-ci": "NODE_ENV=test jest --coverage --ci --runInBand --detectOpenHandles --forceExit",
     "lint": "eslint .",
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
@@ -13,7 +13,7 @@
     "emdaer": "emdaer && git add *.md",
     "prettier": "prettier --write 'src/**/*.js' && eslint 'src/**/*.js' --fix",
     "flow": "flow status --strip-root src",
-    "installPeers": "yarn add --peer --no-lockfile `node ./scripts/printPeers.js`"
+    "installPeers": "npm install --no-save `node ./scripts/printPeers.js`"
   },
   "repository": {
     "type": "git",

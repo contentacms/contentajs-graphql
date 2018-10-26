@@ -71,8 +71,7 @@
     "prettier": "^1.14.3",
     "semantic-release": "^15.10.5",
     "semantic-release-conventional-commits": "^2.0.1",
-    "sinon": "^7.1.0",
-    "travis-deploy-once": "^5.0.9"
+    "sinon": "^7.1.0"
   },
   "dependencies": {
     "apollo-server-express": "^2.1.0",

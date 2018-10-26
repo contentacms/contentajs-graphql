@@ -6,25 +6,27 @@ import type {
   GraphQLFieldResolver,
 } from 'graphql';
 
-import type { ObjectLiteral } from './common';
+import type { ObjectLiteral } from '@contentacms/contenta-graphql/types/common';
 
-export type TypeDef = (() => TypeDef) | string | DocumentNode;
-export type TypeDefinitions = TypeDef | TypeDef[];
+declare module '@contentacms/contenta-graphql/types/graphql' {
+  declare type TypeDef = (() => TypeDef) | string | DocumentNode;
+  declare type TypeDefinitions = TypeDef | TypeDef[];
 
-export type ResolverObj = ObjectLiteral;
-export type ResolverArgs = ObjectLiteral;
-export type ResolverContext = ObjectLiteral;
+  declare type ResolverObj = ObjectLiteral;
+  declare type ResolverArgs = ObjectLiteral;
+  declare type ResolverContext = ObjectLiteral;
 
-export type Resolver = GraphQLFieldResolver<
-  ResolverObj,
-  ResolverContext,
-  ResolverArgs
->;
+  declare type Resolver = GraphQLFieldResolver<
+    ResolverObj,
+    ResolverContext,
+    ResolverArgs
+  >;
 
-export type TypeResolvers = {
-  [string]: Resolver,
-};
+  declare type TypeResolvers = {
+    [string]: Resolver,
+  };
 
-export type ResolverMap = {
-  [string]: TypeResolvers,
-};
+  declare type ResolverMap = {
+    [string]: TypeResolvers,
+  };
+}

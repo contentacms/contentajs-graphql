@@ -3,7 +3,7 @@
 import type {
   ResolverMap,
   TypeDefinitions,
-} from '../flow-typed/custom/graphql';
+} from '@contentacms/contenta-graphql/types/graphql';
 
 const { ApolloServer } = require('apollo-server-express');
 

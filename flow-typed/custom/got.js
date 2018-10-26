@@ -1,9 +1,11 @@
 // @flow
 
-import type { ObjectLiteral } from './common';
+import type { ObjectLiteral } from '@contentacms/contenta-graphql/types/common';
 
-export type GotResponse = {
-  body: ObjectLiteral,
-  url: string,
-  requestUrl: string,
-};
+declare module '@contentacms/contenta-graphql/types/got' {
+  declare type GotResponse = {
+    body: ObjectLiteral,
+    url: string,
+    requestUrl: string,
+  };
+}

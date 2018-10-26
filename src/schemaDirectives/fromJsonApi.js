@@ -1,12 +1,11 @@
 // @flow
 
-import type { ObjectLiteral } from '../../flow-typed/custom/common';
-import type { Resolver } from '../../flow-typed/custom/graphql';
+import type { Resolver } from '@contentacms/contenta-graphql/types/graphql';
 import type {
   JsonApiRelatonship,
   JsonApiResource,
-} from '../../flow-typed/custom/jsonapi';
-import type { GotResponse } from '../../flow-typed/custom/got';
+} from '@contentacms/contenta-graphql/types/jsonapi';
+import type { GotResponse } from '@contentacms/contenta-graphql/types/got';
 
 type FieldDefinition = { resolve: Resolver };
 
@@ -60,7 +59,10 @@ class FromJsonApi extends SchemaDirectiveVisitor {
    *
    * @protected
    */
-  _applyTemplateVariables(templatedUrl: string, vars: ObjectLiteral): string {
+  _applyTemplateVariables(
+    templatedUrl: string,
+    vars: { [string]: any }
+  ): string {
     return Object.keys(vars).reduce(
       (carry, varName) =>
         carry.replace(
@@ -128,16 +130,18 @@ class FromJsonApi extends SchemaDirectiveVisitor {
     includes: JsonApiResource[]
   ) {
     const relMap = new Map();
-    const mapped = [].concat(input).map(item => ({
-      id: _.get(item, 'id'),
-      type: _.get(item, 'type'),
-      ..._.get(item, 'attributes'),
-      ...this._findRelsInIncludes(
-        _.get(item, 'relationships', {}),
-        includes,
-        relMap
-      ),
-    }));
+    const mapped = []
+      .concat(input)
+      .map<JsonApiResource>((item: JsonApiResource) => ({
+        id: _.get(item, 'id'),
+        type: _.get(item, 'type'),
+        ..._.get(item, 'attributes'),
+        ...this._findRelsInIncludes(
+          _.get(item, 'relationships', {}),
+          includes,
+          relMap
+        ),
+      }));
     return Array.isArray(input) ? mapped : mapped.pop();
   }
 

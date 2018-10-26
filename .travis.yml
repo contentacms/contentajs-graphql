@@ -9,7 +9,6 @@ notifications:
   email: false
 before_install:
   - git fetch origin --tags
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
 
 stages:
   - name: test

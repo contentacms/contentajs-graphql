@@ -1,0 +1,9 @@
+# node_modules ignored by default
+__coverage__
+docs
+lib/
+flow-typed/
+# "lib/" is like "**/lib/**", and we have nested lib directories
+# "!src/**/lib/" establishes that we would like to lint those nested directories
+!src/**/lib/
+.gitignore

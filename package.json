@@ -13,11 +13,12 @@
     "emdaer": "emdaer && git add *.md",
     "prettier": "prettier --write 'src/**/*.js' && eslint 'src/**/*.js' --fix",
     "flow": "flow status --strip-root src",
-    "installPeers": "npm install --no-save `node ./scripts/printPeers.js`"
+    "installPeers": "npm install --no-save `node ./scripts/printPeers.js`",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/contentacms/graphqljs.git"
+    "url": "https://github.com/contentacms/contentajs-graphql.git"
   },
   "keywords": [
     "graphql",
@@ -29,9 +30,9 @@
   "author": "Mateu Aguiló Bosch <mateu.aguilo.bosch@gmail.com> (e0ipso)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/contentacms/graphqljs/issues"
+    "url": "https://github.com/contentacms/contentajs-graphql/issues"
   },
-  "homepage": "https://github.com/contentacms/graphqljs#readme",
+  "homepage": "https://github.com/contentacms/contentajs-graphql#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",

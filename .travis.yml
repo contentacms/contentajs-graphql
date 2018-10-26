@@ -27,8 +27,13 @@ jobs:
         - npm run lint
         - npm run flow
         - npm run test-ci
+      after_success:
+        - npm install --no-save coveralls
+        # Report coverage to coveralls.io
+        - cat ./__coverage__/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+        - rm -fr ./__coverage__
 
     -
       stage: release
       script:
-        - npm run semantic-release
+        - npm run travis-deploy-once "npm run semantic-release"

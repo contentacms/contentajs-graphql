@@ -22,11 +22,11 @@ jobs:
     -
       stage: test
       script:
-        - yarn lint
-        - yarn flow
-        - yarn test-ci
+        - npm run lint
+        - npm run flow
+        - npm run test-ci
 
     -
       stage: release
       script:
-        - yarn semantic-release
+        - npm run semantic-release

@@ -7,6 +7,8 @@ cache:
     - ~/.npm
 notifications:
   email: false
+install:
+  - npm install
 before_install:
   - git fetch origin --tags
 

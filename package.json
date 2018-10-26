@@ -1,6 +1,6 @@
 {
   "name": "@contentacms/contentajs-graphql",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "GraphQL helpers for Contenta JS",
   "main": "lib/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/contentacms/graphqljs.git"
+    "url": "https://github.com/contentacms/graphqljs.git"
   },
   "keywords": [
     "graphql",

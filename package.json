@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "prepare": "npm run build",
     "semantic-release": "semantic-release",
-    "build": "babel src -d lib --delete-dir-on-start --copy-files && flow-copy-source src lib",
+    "build": "babel src -d lib --delete-dir-on-start --copy-files && flow-copy-source --ignore *.test.js src lib",
     "emdaer": "emdaer && git add *.md",
     "prettier": "prettier --write 'src/**/*.js' && eslint 'src/**/*.js' --fix",
     "flow": "flow status --strip-root src",

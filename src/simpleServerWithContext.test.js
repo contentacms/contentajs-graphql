@@ -2,15 +2,15 @@ const ase = require('apollo-server-express');
 
 jest.spyOn(ase, 'ApolloServer').mockImplementation(() => 0);
 
-const apolloServerWithContext = require('./apolloServerWithContext');
+const simpleServerWithContext = require('./simpleServerWithContext');
 
-describe('apolloServerWithContext', () => {
+describe('simpleServerWithContext', () => {
   afterEach(() => {
     ase.ApolloServer.mockReset();
   });
   it('can instantiate the ApolloServer', async () => {
     expect.assertions(5);
-    const apolloServer = await apolloServerWithContext(
+    const apolloServer = await simpleServerWithContext(
       { foo: 'bar' },
       [Promise.resolve('{}'), Promise.resolve('Pi')],
       { the: () => 'resolver' }
@@ -24,7 +24,7 @@ describe('apolloServerWithContext', () => {
   });
   it('can instantiate the ApolloServer with defaults', async () => {
     expect.assertions(5);
-    const apolloServer = await apolloServerWithContext({ foo: 'bar' });
+    const apolloServer = await simpleServerWithContext({ foo: 'bar' });
     const apolloArgs = ase.ApolloServer.mock.calls[0][0];
     expect(apolloServer).toBeInstanceOf(ase.ApolloServer);
     expect(apolloArgs.context).toEqual({ foo: 'bar' });

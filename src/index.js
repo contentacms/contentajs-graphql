@@ -1,4 +1,4 @@
 // @flow
 
-module.exports.apolloServerWithContext = require('./apolloServerWithContext');
+module.exports.simpleServerWithContext = require('./simpleServerWithContext');
 module.exports.readRelativeFile = require('./helpers/readFileUtf8');

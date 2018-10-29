@@ -36,7 +36,9 @@ class FromJsonApi extends SchemaDirectiveVisitor {
       const { cmsHost, jsonApiPrefix } = context;
       const jsonApiQuery = `${cmsHost}${jsonApiPrefix}${query}`;
       // Replace variable placeholders.
-      const res = await got(this._applyTemplateVariables(jsonApiQuery, args));
+      const res = await got(this._applyTemplateVariables(jsonApiQuery, args), {
+        json: true,
+      });
       const resolved = this._processApiResponse(
         res,
         this.visitedType.type instanceof GraphQLList

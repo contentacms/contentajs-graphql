@@ -68,6 +68,7 @@
     "flow-bin": "^0.84.0",
     "flow-copy-source": "^2.0.2",
     "flow-typed": "^2.5.1",
+    "graphql-tools": "^4.0.3",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "lint-staged": "^7.3.0",

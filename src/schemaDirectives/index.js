@@ -1,3 +1,3 @@
 /* @flow */
 
-module.exports = [require('./fromJsonApi')];
+module.exports.fromJsonApi = require('./fromJsonApi');

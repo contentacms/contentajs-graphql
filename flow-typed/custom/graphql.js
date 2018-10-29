@@ -6,6 +6,8 @@ import type {
   GraphQLFieldResolver,
 } from 'graphql';
 
+import type { SchemaDirectiveVisitor } from 'graphql-tools';
+
 declare module '@contentacms/contenta-graphql/types/graphql' {
   import type { ObjectLiteral } from '@contentacms/contenta-graphql/types/common';
 
@@ -29,4 +31,8 @@ declare module '@contentacms/contenta-graphql/types/graphql' {
   declare type ResolverMap = {
     [string]: TypeResolvers,
   };
+
+  declare type SchemaDirectives = {
+    [string]: SchemaDirectiveVisitor
+  }
 }

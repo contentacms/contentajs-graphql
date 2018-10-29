@@ -3,6 +3,7 @@
 import type {
   ResolverMap,
   TypeDefinitions,
+  SchemaDirectives,
 } from '@contentacms/contenta-graphql/types/graphql';
 
 const { ApolloServer } = require('apollo-server-express');
@@ -17,7 +18,8 @@ module.exports = async (
     jsonApiPrefix: string,
   },
   additionalTypeDefs: Array<Promise<TypeDefinitions>> = [],
-  additionalResolvers: ResolverMap = {}
+  additionalResolvers: ResolverMap = {},
+  additionalSchemaDirectives: SchemaDirectives = {}
 ) =>
   new ApolloServer({
     typeDefs: await Promise.all(directives.concat(additionalTypeDefs)),
@@ -25,6 +27,10 @@ module.exports = async (
     resolverValidationOptions: {
       requireResolversForResolveType: false,
     },
-    schemaDirectives,
+    schemaDirectives: Object.assign(
+      {},
+      schemaDirectives,
+      additionalSchemaDirectives
+    ),
     context,
   });

@@ -8,6 +8,7 @@ This includes all the nested relationships at all levels. This leaves everything
 fields for the response.
 
 ### Examples
+Imagine you have these top level fields in your GraphQL query.
 
 ```graphql
  type Query {
@@ -27,7 +28,8 @@ fields for the response.
 ```
 
 Note how you can specify a templated URL with variables. The replacement value for these variables will be specified in
-the query. For instance see how the `{authorName}` value is provided in the GraphQL query below:
+the query. For instance see how the `{authorName}` value is provided when the front-end is querying the GraphQL server
+like:
 
 ```
 curl -X GET \

@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:9f568a6dfedca0e23f0251b2df63218e
+  emdaerHash:0f3b0f0f5cc12004337875ffc6196e7d
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
@@ -70,6 +70,7 @@ project.</p>
 This includes all the nested relationships at all levels. This leaves everything ready for the user to start selecting
 fields for the response.</p>
 <h3 id="examples">Examples</h3>
+<p>Imagine you have these top level fields in your GraphQL query.</p>
 
 ```graphql
 type Query {
@@ -86,7 +87,8 @@ type Query {
 }
 ```
 <p>Note how you can specify a templated URL with variables. The replacement value for these variables will be specified in
-the query. For instance see how the <code>{authorName}</code> value is provided in the GraphQL query below:</p>
+the query. For instance see how the <code>{authorName}</code> value is provided when the front-end is querying the GraphQL server
+like:</p>
 <pre><code>
 curl -X GET \
   'http://localhost:3000/graphql?query={recipesByAuthor(authorName:"Umami"){title,id,random,author{name}}}'

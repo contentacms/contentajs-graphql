@@ -5,25 +5,92 @@
 -->
 
 <!--
-  emdaerHash:20e833ffdb0f9cef996102cac0420315
+  emdaerHash:9f568a6dfedca0e23f0251b2df63218e
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
-<p>ContentaJS GraphQL is a repository that contains a set of helpers to build your
-GraphQL project on top of Contenta.js</p>
-<p align="center"><img src="./.emdaer/docs/assets/graphql.png" alt="GraphQL"></p>
+<p>ContentaJS GraphQL is a repository that contains a set of helpers to build your GraphQL project on top of Contenta JS.</p>
+<p align="center"><img src="./.emdaer/docs/assets/graphql.png" alt="GraphQL" width="60%"></p>
 
-<p><strong>IMPORTANT:</strong> I need to finish this…</p>
+<p>This project provides a simple Apollo server instance that you can use in your Contenta JS application. It ships wit a
+very convenient <a href="https://www.apollographql.com/docs/graphql-tools/schema-directives.html">GraphQL directive</a> that will
+fetch data from your Contenta CMS back-end using JSON API. The result of that data fetch will be parsed and prepared so
+it can be resolved by GraphQL without additional work.</p>
+<p>You can see this is action in the <a href="https://github.com/contentacms/contentajs/tree/graphql-example-code"><code>graphql-example-code</code></a>
+branch. If you prefer, you can see <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1">the diff</a>.
+That will show the necessary code to add GraphQL to your Contenta project.</p>
 <!-- toc -->
 <ul>
+<li><a href="#benefits-of-graphql-in-nodejs">Benefits of GraphQL in node.js</a></li>
 <li><a href="#installation">Installation</a></li>
+<li><a href="#the-fromjsonapi-directive">The <code>@fromJsonApi(…)</code> directive</a><ul>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</li>
 <li><a href="#contributors">Contributors</a></li>
 <li><a href="#license">License</a></li>
 </ul>
 <!-- tocstop -->
 <p><a href="https://travis-ci.org/contentacms/contentajs-graphql/"><img src="https://img.shields.io/travis/contentacms/contentajs-graphql.svg?style=flat-square" alt="Travis"></a> <a href="https://coveralls.io/github/contentacms/contentajs-graphql/"><img src="https://img.shields.io/coveralls/github/contentacms/contentajs-graphql.svg?style=flat-square" alt="Coverage"></a> <a href="https://david-dm.org/contentacms/contentajs-graphql"><img src="https://img.shields.io/david/contentacms/contentajs-graphql.svg?style=flat-square" alt="David Dependency Management"></a> <a href="https://github.com/contentacms/contentajs-graphql"><img src="https://img.shields.io/github/last-commit/contentacms/contentajs-graphql.svg?style=flat-square" alt="Last Commit"></a> <a href="http://npmjs.com/package/@contentacms/contentajs-graphql"><img src="https://img.shields.io/node/v/@contentacms/contentajs-graphql.svg?style=flat-square" alt="Node"></a> <a href="https://github.com/emdaer/emdaer"><img src="https://img.shields.io/badge/📓-documented%20with%20emdaer-F06632.svg?style=flat-square" alt="Documented with emdaer"></a></p>
+<h2 id="benefits-of-graphql-in-node-js">Benefits of GraphQL in node.js</h2>
+<p>The most obvious benefit of having GraphQL in node.js is that you can aggregate different APIs under a single GraphQL
+back-end in a non-blocking I/O runtime. This will <strong>improve performance dramatically</strong>.</p>
+<p>Another obvious benefit is that by using the <a href="https://www.apollographql.com/">Apollo Server</a> you get <strong>many</strong> <a href="https://www.apollographql.com/docs/apollo-server/v2/">features
+for free</a> (like mocking, persited queries, cache hint directives,
+and many <a href="https://github.com/apollographql/apollo-server/tree/master/packages">additional packages</a>). And even more if
+your consumers use the <a href="https://www.apollographql.com/docs/react/">Apollo Client</a>.</p>
+<p>Another outstanding benefit is that by using <a href="https://github.com/graphql/graphql-js">GraphQL.js</a> you are depending on
+the reference implementation of GraphQL. That means that it is supported by the official GraphQL team. It also means
+that it has extensive support and a wide <a href="https://graphql.org/community/">community</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>TODO</p>
+<p>You can see an example of this in this <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1">demo code</a>.</p>
+<ol>
+<li>Inside of your Contenta JS project add the necessary dependencies</li>
+</ol>
+<pre><code>
+npm install --save @contentacms/contentajs-graphql graphql graphql-tools
+</code></pre>
+<ol start="2">
+<li><a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-f4fed62a72fc59b66a2183017cc4b9cb">Create a server instance with the Contena CMS URL and add it to express</a>.</li>
+<li><p>Write your GraphQL types.</p>
+</li>
+<li><p>If they follow the structure of your JSON API resources they’ll get automatically resolved. See <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-da57a422b90e697b0a5bbe0a11699b7a">this example of an Article type</a>.</p>
+</li>
+<li><p>If there are any additional fields, you can resolve them <em>the GraphQL way</em>. This example <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-2be3149c012f9a61fb6bbd290edde707R9">creates an extra field called random</a>.
+In order to resolve the value of <code>random</code> you will need a resolver like <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-895614263fb87c38476aeb8dad289b12">this one</a>.</p>
+</li>
+<li><p>THAT’S IT.</p>
+</li>
+</ol>
+<h2 id="the-fromjsonapi-directive">The <code>@fromJsonApi(…)</code> directive</h2>
+<p>The <code>@fromJsonApi(…)</code> is the biggest motivator of this repository. Since JSON API allows you to get <em>the information you
+need and only the information you need, in a single request</em>, it is the perfect data fetcher for your GraphQL.js
+project.</p>
+<p>This directive will intelligently turn the response from JSON API into the hierarchical format that GraphQL expects.
+This includes all the nested relationships at all levels. This leaves everything ready for the user to start selecting
+fields for the response.</p>
+<h3 id="examples">Examples</h3>
+
+```graphql
+type Query {
+  lastRecipe: Recipe
+    @fromJsonApi(query: "/recipes?page[limit]=1&sort=createdAt&include=author")
+  recipesByAuthor(authorName: String!): [Recipe]
+    @fromJsonApi(
+      query: "/recipes?filter[author.name]={authorName}&include=author"
+    )
+  articlesByAuthor(authorName: String!): [Article]
+    @fromJsonApi(
+      query: "/articles?filter[owner.name]={authorName}&include=owner"
+    )
+}
+```
+<p>Note how you can specify a templated URL with variables. The replacement value for these variables will be specified in
+the query. For instance see how the <code>{authorName}</code> value is provided in the GraphQL query below:</p>
+<pre><code>
+curl -X GET \
+  'http://localhost:3000/graphql?query={recipesByAuthor(authorName:"Umami"){title,id,random,author{name}}}'
+</code></pre>
 <h2 id="contributors">Contributors</h2>
 <details>
 <summary><strong>Contributors</strong></summary><br>

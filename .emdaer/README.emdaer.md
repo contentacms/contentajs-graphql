@@ -44,7 +44,19 @@
 
 <!--emdaer-p
   - '@emdaer/plugin-import'
+  - path: .emdaer/docs/benefits.md
+    runEmdaer: false
+-->
+
+<!--emdaer-p
+  - '@emdaer/plugin-import'
   - path: .emdaer/docs/install.md
+    runEmdaer: false
+-->
+
+<!--emdaer-p
+  - '@emdaer/plugin-import'
+  - path: .emdaer/docs/directive.md
     runEmdaer: false
 -->
 

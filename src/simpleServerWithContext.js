@@ -33,4 +33,7 @@ module.exports = async (
       additionalSchemaDirectives
     ),
     context,
+    // This is the same check made by the Apollo Server to enable/disable
+    // introspection in production.
+    tracing: process.env.NODE_ENV !== 'production',
   });

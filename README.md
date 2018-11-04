@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:4b1c9821357be9caabfe92bf739884cf
+  emdaerHash:aed074836fd0c53960235a3c417bc889
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>

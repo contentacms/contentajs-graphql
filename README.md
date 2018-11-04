@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:ffed72627ed6a0d132db5d46b0614511
+  emdaerHash:4b1c9821357be9caabfe92bf739884cf
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
@@ -96,8 +96,13 @@ curl -X GET \
 </code></pre>
 <h2 id="videos">Videos</h2>
 <p>Take a look at the video series for the ContentaJS GraphQL introduction.</p>
-<p>|<a href="https://www.youtube.com/watch?v=TrfuwNV5cUQ"><img src="https://img.youtube.com/vi/TrfuwNV5cUQ/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=KEd4rsIQBug"><img src="https://img.youtube.com/vi/KEd4rsIQBug/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=Qnlm2gCKcwo"><img src="https://img.youtube.com/vi/Qnlm2gCKcwo/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=j492r-M5-8A"><img src="https://img.youtube.com/vi/j492r-M5-8A/0.jpg" alt="ContentaJS GraphQL video"></a>|
-|<a href="https://www.youtube.com/watch?v=TLx4EmAP1TY"><img src="https://img.youtube.com/vi/TLx4EmAP1TY/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=7eLsfIZYuvU"><img src="https://img.youtube.com/vi/7eLsfIZYuvU/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=xMn-jRFJ_lo"><img src="https://img.youtube.com/vi/xMn-jRFJ_lo/0.jpg" alt="ContentaJS GraphQL video"></a>|<a href="https://www.youtube.com/watch?v=TrfuwNV5cUQ"><img src="https://img.youtube.com/vi/TrfuwNV5cUQ/0.jpg" alt="ContentaJS GraphQL video"></a>|</p>
+<table>
+  <tr>
+    <td><a href="https://www.youtube.com/watch?v=TrfuwNV5cUQ"><img src="https://img.youtube.com/vi/TrfuwNV5cUQ/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=xMn-jRFJ_lo"><img src="https://img.youtube.com/vi/xMn-jRFJ_lo/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=7eLsfIZYuvU"><img src="https://img.youtube.com/vi/7eLsfIZYuvU/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=TLx4EmAP1TY"><img src="https://img.youtube.com/vi/TLx4EmAP1TY/0.jpg" alt="ContentaJS GraphQL video"></a></td>
+    <td><a href="https://www.youtube.com/watch?v=omQKWi_9DM"><img src="https://img.youtube.com/vi/omQKWi_9DM/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=j492r-M5-8A"><img src="https://img.youtube.com/vi/j492r-M5-8A/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=Qnlm2gCKcwo"><img src="https://img.youtube.com/vi/Qnlm2gCKcwo/0.jpg" alt="ContentaJS GraphQL video"></a></td><td><a href="https://www.youtube.com/watch?v=KEd4rsIQBug"><img src="https://img.youtube.com/vi/KEd4rsIQBug/0.jpg" alt="ContentaJS GraphQL video"></a></td>
+  </tr>
+</table>
+
 <h2 id="contributors">Contributors</h2>
 <details>
 <summary><strong>Contributors</strong></summary><br>

@@ -5,7 +5,7 @@
 -->
 
 <!--
-  emdaerHash:0f3b0f0f5cc12004337875ffc6196e7d
+  emdaerHash:0d18edd03b3fb0e634476a9c62ca4794
 -->
 
 <h1 id="contentajs-graphql-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">ContentaJS GraphQL <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
@@ -17,7 +17,7 @@ very convenient <a href="https://www.apollographql.com/docs/graphql-tools/schema
 fetch data from your Contenta CMS back-end using JSON API. The result of that data fetch will be parsed and prepared so
 it can be resolved by GraphQL without additional work.</p>
 <p>You can see this is action in the <a href="https://github.com/contentacms/contentajs/tree/graphql-example-code"><code>graphql-example-code</code></a>
-branch. If you prefer, you can see <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1">the diff</a>.
+branch. If you prefer, you can see <a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1">the diff</a>.
 That will show the necessary code to add GraphQL to your Contenta project.</p>
 <!-- toc -->
 <ul>
@@ -43,7 +43,7 @@ your consumers use the <a href="https://www.apollographql.com/docs/react/">Apoll
 the reference implementation of GraphQL. That means that it is supported by the official GraphQL team. It also means
 that it has extensive support and a wide <a href="https://graphql.org/community/">community</a>.</p>
 <h2 id="installation">Installation</h2>
-<p>You can see an example of this in this <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1">demo code</a>.</p>
+<p>You can see an example of this in this <a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1#files">demo code</a>.</p>
 <ol>
 <li>Inside of your Contenta JS project add the necessary dependencies</li>
 </ol>
@@ -51,13 +51,13 @@ that it has extensive support and a wide <a href="https://graphql.org/community/
 npm install --save @contentacms/contentajs-graphql graphql graphql-tools
 </code></pre>
 <ol start="2">
-<li><a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-f4fed62a72fc59b66a2183017cc4b9cb">Create a server instance with the Contena CMS URL and add it to express</a>.</li>
+<li><a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1#diff-f4fed62a72fc59b66a2183017cc4b9cb">Create a server instance with the Contena CMS URL and add it to express</a>.</li>
 <li><p>Write your GraphQL types.</p>
 </li>
-<li><p>If they follow the structure of your JSON API resources they’ll get automatically resolved. See <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-da57a422b90e697b0a5bbe0a11699b7a">this example of an Article type</a>.</p>
+<li><p>If they follow the structure of your JSON API resources they’ll get automatically resolved. See <a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1#diff-da57a422b90e697b0a5bbe0a11699b7a">this example of an Article type</a>.</p>
 </li>
-<li><p>If there are any additional fields, you can resolve them <em>the GraphQL way</em>. This example <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-2be3149c012f9a61fb6bbd290edde707R9">creates an extra field called random</a>.
-In order to resolve the value of <code>random</code> you will need a resolver like <a href="https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1#diff-895614263fb87c38476aeb8dad289b12">this one</a>.</p>
+<li><p>If there are any additional fields, you can resolve them <em>the GraphQL way</em>. This example <a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1#diff-2be3149c012f9a61fb6bbd290edde707R9">creates an extra field called random</a>.
+In order to resolve the value of <code>random</code> you will need a resolver like <a href="https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1#diff-895614263fb87c38476aeb8dad289b12">this one</a>.</p>
 </li>
 <li><p>THAT’S IT.</p>
 </li>

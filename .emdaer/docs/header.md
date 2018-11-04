@@ -14,5 +14,5 @@ fetch data from your Contenta CMS back-end using JSON API. The result of that da
 it can be resolved by GraphQL without additional work.
 
 You can see this is action in the [`graphql-example-code`](https://github.com/contentacms/contentajs/tree/graphql-example-code)
-branch. If you prefer, you can see [the diff](https://github.com/contentacms/contentajs/compare/9b95bba53e47220129fcf2e84eed9ceedff119d9...graphql-example-code?expand=1).
+branch. If you prefer, you can see [the diff](https://github.com/contentacms/contentajs/compare/92c92c1e29c0a694d8bb3d25568cfb58bdd8345c...graphql-example-code?expand=1).
 That will show the necessary code to add GraphQL to your Contenta project.

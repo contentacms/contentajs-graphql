@@ -60,6 +60,12 @@
     runEmdaer: false
 -->
 
+<!--emdaer-p
+  - '@emdaer/plugin-import'
+  - path: .emdaer/docs/videos.md
+    runEmdaer: false
+-->
+
 ## Contributors
 <!--emdaer-p
   - '@emdaer/plugin-contributors-details-github'

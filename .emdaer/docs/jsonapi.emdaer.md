@@ -1,4 +1,4 @@
-# JSON API Drupal and GraphQL Drupal <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100">
+# JSON API Drupal and GraphQL Drupal <img align="right" src="../logo.svg" alt="Contenta logo" title="Contenta logo" width="100">
 
 **Disclaimer:** I'm the original author of the JSON API module in Drupal, so my vision is clearly skewed. Nevertheless
 these are the reasons to have GraphQL.js talk to Drupal using the JSON API Drupal module as opposed to the GraphQL

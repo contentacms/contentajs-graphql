@@ -5,10 +5,10 @@
 -->
 
 <!--
-  emdaerHash:f27a3f8f52761f3b502d5c00c653b9b6
+  emdaerHash:3d296100991fac6e0501876dc7e106cf
 -->
 
-<h1 id="json-api-drupal-and-graphql-drupal-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">JSON API Drupal and GraphQL Drupal <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
+<h1 id="json-api-drupal-and-graphql-drupal-img-align-right-src-logo-svg-alt-contenta-logo-title-contenta-logo-width-100-">JSON API Drupal and GraphQL Drupal <img align="right" src="../logo.svg" alt="Contenta logo" title="Contenta logo" width="100"></h1>
 <p><strong>Disclaimer:</strong> I’m the original author of the JSON API module in Drupal, so my vision is clearly skewed. Nevertheless
 these are the reasons to have GraphQL.js talk to Drupal using the JSON API Drupal module as opposed to the GraphQL
 Drupal module.</p>

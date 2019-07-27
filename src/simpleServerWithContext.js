@@ -16,10 +16,14 @@ module.exports = async (
   context: {
     cmsHost: string,
     jsonApiPrefix: string,
+    access_token: string,
   },
+  // TODO: merge these into an options object so that there is no need to
+  // pass null arguments
   additionalTypeDefs: Array<Promise<TypeDefinitions>> = [],
   additionalResolvers: ResolverMap = {},
-  additionalSchemaDirectives: SchemaDirectives = {}
+  additionalSchemaDirectives: SchemaDirectives = {},
+  additionalDataSources: any = {}
 ) =>
   new ApolloServer({
     typeDefs: await Promise.all(directives.concat(additionalTypeDefs)),
@@ -32,6 +36,9 @@ module.exports = async (
       schemaDirectives,
       additionalSchemaDirectives
     ),
+    dataSources: () => {
+      return additionalDataSources;
+    },
     context,
     // This is the same check made by the Apollo Server to enable/disable
     // introspection in production.
